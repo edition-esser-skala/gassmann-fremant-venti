@@ -535,14 +535,3 @@ BassoCoroLyrics = \lyricmode {
 
 	te. %197 finis
 }
-
-% Fremant venti et procellae,
-% agitato fremant mari,
-% lumen autis en favent stellae,
-% mens beata in salvo stat.
-% Eja castos inter ardores,
-% sacros inter laudis honores
-% ad solemnia huc convolate.
-% Hic fideles Thura litantes,
-% Divinam opem hic implorantes,
-% pia corda ad Deum levate.
