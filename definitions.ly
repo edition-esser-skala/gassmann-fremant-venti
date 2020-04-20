@@ -33,8 +33,8 @@
        (stretchability . 0))
 
 	top-system-spacing =
-    #'((basic-distance . 12)
-       (minimum-distance . 12)
+    #'((basic-distance . 15)
+       (minimum-distance . 15)
        (padding . -100)
        (stretchability . 0))
 
@@ -45,8 +45,8 @@
        (stretchability . 0))
 
 	markup-system-spacing =
-    #'((basic-distance . 12)
-       (minimum-distance . 12)
+    #'((basic-distance . 15)
+       (minimum-distance . 15)
        (padding . -100)
        (stretchability . 0))
 
@@ -244,7 +244,8 @@ tempoMarkup =
 	#})
 %
 
-tempoOffertorium = \tempoMarkup "Allegro moderato"
+tempoOffertorium = \tempoMarkup "Allegro moderato/molto"
+tempoChorus = \tempoMarkup "Allegro"
 
 
 
@@ -340,8 +341,8 @@ tempoOffertorium = \tempoMarkup "Allegro moderato"
 		\override SystemStartBracket.collapse-height = #1
 		\override InstrumentName.font-shape = #'italic
 		\override StaffGrouper.staffgroup-staff-spacing =
-		  #'((basic-distance . 12)
-         (minimum-distance . 12)
+		  #'((basic-distance . 15)
+         (minimum-distance . 15)
          (padding . -100)
          (stretchability . 0))
 		\override StaffGrouper.staff-staff-spacing =
@@ -372,8 +373,8 @@ tempoOffertorium = \tempoMarkup "Allegro moderato"
 		\GrandStaff
 		\override InstrumentName.font-shape = #'italic
 		\override StaffGrouper.staffgroup-staff-spacing =
-		  #'((basic-distance . 12)
-         (minimum-distance . 12)
+		  #'((basic-distance . 15)
+         (minimum-distance . 15)
          (padding . -100)
          (stretchability . 0))
 		\override StaffGrouper.staff-staff-spacing =

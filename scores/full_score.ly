@@ -42,13 +42,13 @@
 						\partcombine \TrombaI \TrombaII
 					>>
 				>>
-				\new Staff \with { \timpStaffDistance } {
+				\new Staff {
 					\set Staff.instrumentName = \markup { \center-column { "Timpani" "in D–A" } }
 					% \transpose c d
 					\Timpani
 				}
-				\new StaffGroup \with { \stringGroupDistance } <<
-					\new GrandStaff <<
+				\new StaffGroup <<
+					\new GrandStaff \with { \violinGroupDistance } <<
 						\new Staff {
 							\set Staff.instrumentName = "Violino I"
 							\ViolinoI
@@ -106,7 +106,7 @@
 				}
 			>>
 			\layout { }
-			\midi { \tempo 4 = 90 }
+			% \midi { \tempo 4 = 120 }
 		}
 	}
 }
