@@ -339,6 +339,203 @@ BassoLyrics = \lyricmode {
 	te. %197 finis
 }
 
+BassoCoroNotes = {
+	\relative c {
+		\clef bass
+		\key d \major \time 4/4 \autoBeamOff \tempoOffertorium
+		R1*101 \noBreak %101
+		R1\fermataMarkup \bar "||"
+		\time 3/4 \tempoChorus \newSpacingSection
+			\mvTr d'2\fE^\tutti d4 \noBreak
+		a a r
+		a a a %105
+		d( a) d,
+		g2 fis4
+		e2 d4
+		cis8([ h)] a4 cis
+		d2 a'4 %110
+		h2 a4
+		gis4. gis8 a4
+		a gis fis
+		e e r
+		r e a %115
+		gis2 a4
+		e'8([ d)] cis4 gis
+		a e r
+		r e a
+		gis2 a4 %120
+		e'8([ d)] cis4 gis
+		a e r
+		cis2 cis4
+		h4. h8 h4
+		a4 h cis %125
+		d d'8[ cis h a]
+		gis4 a8[ gis fis e]
+		dis2.
+		\once \tieDashed e~
+		e %130
+		a,4 a' cis
+		\once \tieDashed d4~ d8[ cis h a]
+		gis4 a8[ gis fis e]
+		dis2.
+		\once \tieDashed e~ %135
+		e
+		a,4 r r
+		R2.*4 %141
+		r4 a' a
+		g!2 g4
+		fis fis fis
+		h fis r %145
+		h h a!
+		gis2 e4
+		a a g
+		fis2 d4
+		e2 fis4 %150
+		g g h
+		c h g
+		d' d, r
+		R2.
+		r4 d' c %155
+		h( d) g,
+		fis a d,
+		g g r
+		R2.
+		r4 e' d %160
+		cis!( e) a,
+		gis? h e,
+		a a r
+		R2.
+		r4 fis e %165
+		d2 h4
+		ais ais h
+		fis' fis r
+		h2 h4
+		a! a a %170
+		d cis h
+		a a r
+		r a d
+		cis2 d4
+		a8([ g)] fis4 cis %175
+		d a r
+		a' a d
+		cis2 d4
+		a8([ g)] fis4 cis
+		d a r %180
+		fis'2 fis4
+		e e e
+		d d fis
+		g4. fis8[ e d]
+		cis4 d8[ cis h a] %185
+		gis2.
+		\once \tieDashed a~
+		a
+		d2 fis4
+		g8([ fis)] g([ a)] h([ g)] %190
+		cis!4 d8[ cis h a]
+		gis2.
+		\tieDashed a~
+		a~
+		a~ %195
+		a
+		d,2 r4
+		R2.
+		R\fermataMarkup \bar "|." %199 finis
+	}
+}
+
+BassoCoroLyrics = \lyricmode {
+	E -- ja %103
+	ca -- stos
+	in -- ter ar -- %105
+	do -- res,
+	sa -- cros
+	in -- ter
+	lau -- dis ho --
+	no -- res %110
+	ad so --
+	lem -- ni -- a
+	huc con -- vo --
+	la -- te,
+	e -- ja %115
+	ca -- stos
+	in -- ter ar --
+	do -- res,
+	sa -- cros
+	in -- ter %120
+	lau -- dis ho --
+	no -- res
+	ad so --
+	lem -- ni -- a
+	huc con -- vo -- %125
+	la -- _
+	_ _
+	_
+	_
+	%130
+	te, con -- vo --
+	la --
+	_ _
+	_
+	_ %135
+
+	te.
+
+	Hic fi -- %142
+	de -- les
+	Thu -- ra li --
+	tan -- tes, %145
+	Di -- vi -- nam
+	o -- pem
+	hic im -- plo --
+	ran -- tes,
+	pi -- a %150
+	cor -- da ad
+	De -- um le --
+	va -- te,
+
+	e -- ja %155
+	ca -- stos
+	in -- ter ar --
+	do -- res,
+
+	sa -- cros %160
+	in -- ter
+	lau -- dis ho --
+	no -- res,
+
+	hic fi -- %165
+	de -- les
+	Thu -- ra li --
+	tan -- tes,
+	pi -- a
+	cor -- da ad %170
+	De -- um le --
+	va -- te,
+	hic fi --
+	de -- les
+	Thu -- ra li -- %175
+	tan -- tes,
+	Di -- vi -- nam
+	o -- pem
+	hic im -- plo --
+	ran -- tes, %180
+	pi -- a
+	cor -- da ad
+	De -- um le --
+	va -- _
+	_ _ %185
+	_
+	_
+
+	te, le --
+	va -- te, le -- %190
+	va -- _
+	_
+	_
+
+	te. %197 finis
+}
+
 % Fremant venti et procellae,
 % agitato fremant mari,
 % lumen autis en favent stellae,

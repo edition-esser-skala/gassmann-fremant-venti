@@ -8,7 +8,7 @@ TrombaI = {
 	\relative c' {
 		\clef treble
 		\key c \major \time 4/4 \tempoOffertorium
-		R1*101 %101
+		\once \override MultiMeasureRest.minimum-length = #30 R1*101 %101
 		R1\fermataMarkup \bar "||"
 		\time 3/4 \tempoChorus e'2\f e4 \noBreak
 		d d8 d d d
