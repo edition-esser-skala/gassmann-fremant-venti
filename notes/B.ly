@@ -1,8 +1,4 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 BassoNotes = {
 	\relative c {
@@ -78,7 +74,7 @@ BassoNotes = {
 		e2. e4 %95
 		d4 r r2
 		R1*5 \noBreak %101
-		R1\fermataMarkup \bar "||"
+		R1\fermata \bar "||"
 		\time 3/4 \tempoChorus \newSpacingSection
 			\mvTr d'2\fE^\tutti d4 \noBreak
 		a a r
@@ -173,7 +169,7 @@ BassoNotes = {
 		a
 		d,2 r4
 		R2.
-		R\fermataMarkup \bar "|." %199 finis
+		R\fermata \bar "|." %199 finis
 	}
 }
 
@@ -344,7 +340,7 @@ BassoCoroNotes = {
 		\clef bass
 		\key d \major \time 4/4 \autoBeamOff \tempoOffertorium
 		R1*101 \noBreak %101
-		R1\fermataMarkup \bar "||"
+		R1\fermata \bar "||"
 		\time 3/4 \tempoChorus \newSpacingSection
 			\mvTr d'2\fE^\tutti d4 \noBreak
 		a a r
@@ -439,7 +435,7 @@ BassoCoroNotes = {
 		a
 		d,2 r4
 		R2.
-		R\fermataMarkup \bar "|." %199 finis
+		R\fermata \bar "|." %199 finis
 	}
 }
 

@@ -1,8 +1,4 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 \include "../definitions.ly"
 
@@ -76,9 +72,9 @@
 			<<
 				\new StaffGroup <<
 					\new GrandStaff <<
-						\set GrandStaff.instrumentName = \markup { \center-column { "Tromba" "in D" } }
-						\new Staff \with { instrumentName = "I" } { \TrombaI }
-						\new Staff \with { instrumentName = "II" } { \TrombaII }
+						\set GrandStaff.instrumentName = \markup { \center-column { "Clarino" "in D" } }
+						\new Staff \with { instrumentName = "I" } { \ClarinoI }
+						\new Staff \with { instrumentName = "II" } { \ClarinoII }
 					>>
 				>>
 				\new Staff { \Timpani }

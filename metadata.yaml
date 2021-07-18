@@ -1,0 +1,17 @@
+composer: Gassmann, Florian Leopold
+title: Fremant venti et procellae
+id: (D-NATk NA/SP (G-3))
+genre: offertorium
+scoring: B solo, S, A, T, B (coro), 2 ob, 2 cor (D), 2 clno (D), timp (D–A), 2 vl, vla, b, org
+sources:
+  1:
+    siglum: D-NATk
+    shelfmark: NA/SP (G-3)
+    type: manuscript copy
+    date: 1800–1830
+    rism: 455039903
+    url: https://mirador.acdh.oeaw.ac.at/musikarchivspitz/D-NATk_G3/
+github: gassmann-fremant-venti
+imslp: Fremant_venti_et_procellae_(Gassmann,_Florian_Leopold)
+notes:
+

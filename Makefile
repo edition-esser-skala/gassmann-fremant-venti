@@ -1,12 +1,7 @@
-# (c) 2020 by Wolfgang Esser-Skala.
-# This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-# To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-
 # change the following variables according to your project
 project = Gassmann_Fremant_venti
-notes = ob1 ob2 cor1 cor2 tr1 tr2 timp vl1 vl2 vla S A T B org
-scores = full_score ob1 ob2 ottoni vl1 vl2 vla coro b org
+notes = ob1 ob2 cor1 cor2 clno1 clno2 timp vl1 vl2 vla S A T B org
+scores = full_score ob1 ob2 cor12 ottoni vl1 vl2 vla B_solo coro b org
 
 # general definitions
 zipname = $(project:%=%_engraving_files)

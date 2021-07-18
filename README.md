@@ -1,8 +1,8 @@
 # Florian Leopold Gassmann: Fremant venti et procellae
 
-Engraving files for LilyPond 2.18.0
+Engraving files for LilyPond 2.22.0
 
-First version, April 2020
+Version 1.1, July 2021
 
 
 ## Requirements

@@ -1,15 +1,11 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+\version "2.22.0"
 
-\version "2.18.0"
-
-TrombaII = {
+ClarinoII = {
 	\relative c' {
 		\clef treble
 		\key c \major \time 4/4 \tempoOffertorium
 		R1*101 %101
-		R1\fermataMarkup \bar "||"
+		R1\fermata \bar "||"
 		\time 3/4 \tempoChorus c'2\f c4 \noBreak
 		g g8 g g g
 		g2 g4 %105

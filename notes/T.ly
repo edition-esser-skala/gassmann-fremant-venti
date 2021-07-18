@@ -1,8 +1,4 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-\version "2.18.0"
+\version "2.22.0"
 
 TenoreIncipit = \markup {
 	"Tenore" \hspace #-19.5 \score {
@@ -20,7 +16,7 @@ TenoreNotes = {
 		\clef "treble_8"
 		\key d \major \time 4/4 \autoBeamOff \tempoOffertorium
 		R1*101 \noBreak %101
-		R1\fermataMarkup \bar "||"
+		R1\fermata \bar "||"
 		\time 3/4 \tempoChorus \mvTr fis2\fE^\tutti fis4 \noBreak
 		e e r
 		e e cis %105
@@ -114,7 +110,7 @@ TenoreNotes = {
 		e2.
 		fis2 r4
 		R2.
-		R\fermataMarkup \bar "|." %199 finis
+		R\fermata \bar "|." %199 finis
 	}
 }
 

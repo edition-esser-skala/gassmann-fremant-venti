@@ -1,15 +1,11 @@
-% (c) 2020 by Wolfgang Esser-Skala.
-% This file is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-% To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+\version "2.22.0"
 
-\version "2.18.0"
-
-TrombaI = {
+ClarinoI = {
 	\relative c' {
 		\clef treble
 		\key c \major \time 4/4 \tempoOffertorium
 		\once \override MultiMeasureRest.minimum-length = #30 R1*101 %101
-		R1\fermataMarkup \bar "||"
+		R1\fermata \bar "||"
 		\time 3/4 \tempoChorus e'2\f e4 \noBreak
 		d d8 d d d
 		d2 d4 %105
