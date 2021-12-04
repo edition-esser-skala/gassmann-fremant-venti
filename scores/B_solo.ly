@@ -1,80 +1,70 @@
 \version "2.22.0"
 
 \include "../definitions.ly"
-
-\paper {
-	indent = 2\cm
-	top-margin = 1\cm
-	system-separator-markup = ##f
-	system-system-spacing =
-    #'((basic-distance . 18)
-       (minimum-distance . 18)
-       (padding . -100)
-       (stretchability . 0))
-
-	top-system-spacing =
-    #'((basic-distance . 12)
-       (minimum-distance . 12)
-       (padding . -100)
-       (stretchability . 0))
-
-	top-markup-spacing =
-    #'((basic-distance . 0)
-       (minimum-distance . 0)
-       (padding . -100)
-       (stretchability . 0))
-
-	markup-system-spacing =
-    #'((basic-distance . 12)
-       (minimum-distance . 12)
-       (padding . -100)
-       (stretchability . 0))
-
-	systems-per-page = #6
-}
-
-\layout {
-	\context {
-		\Lyrics
-		\override LyricText.font-size = #-.5
-	}
-	\context {
-		\ChoirStaff
-		\override StaffGrouper.staff-staff-spacing =
-		  #'((basic-distance . 12)
-         (minimum-distance . 12)
-         (padding . -100)
-         (stretchability . 0))
-		\override StaffGrouper.staffgroup-staff-spacing =
-		  #'((basic-distance . 13)
-         (minimum-distance . 13)
-         (padding . -100)
-         (stretchability . 0))
-	}
-}
-
-#(set-global-staff-size 15.87)
+\include "score_settings/coro.ly"
 
 \book {
-	\bookpart {
-		\header {
-			title = "O F F E R T O R I U M"
-		}
-		\score {
-			<<
-				\new Staff {
-					\set Staff.instrumentName = "Basso"
-					\new Voice = "Basso" { \dynamicUp \BassoNotes }
-				}
-				\new Lyrics \lyricsto Basso \BassoLyrics
-				\new StaffGroup <<
-					\new Staff {
-						\set Staff.instrumentName = "Organo"
-						\Organo
-					}
-				>>
-				\new FiguredBass { \BassFigures }
-			>>
-		}
-	}
+  \bookpart {
+    \section "Fremant venti"
+    \addTocEntry
+    \paper {
+      system-system-spacing.basic-distance = #20
+      system-system-spacing.minimum-distance = #20
+      systems-per-page = #6
+      indent = 2\cm
+    }
+    \score {
+      <<
+        \new ChoirStaff <<
+          \new Staff {
+            \set Staff.instrumentName = "Basso"
+            \new Voice = "Basso" { \dynamicUp \OffertoriumBassoNotes }
+          }
+          \new Lyrics \lyricsto Basso \OffertoriumBassoLyrics
+        >>
+        \new StaffGroup <<
+          \new Staff {
+            \set Staff.instrumentName = "Organo"
+            \OffertoriumOrgano
+          }
+        >>
+        \new FiguredBass { \OffertoriumBassFigures }
+      >>
+    }
+  }
+  \bookpart {
+    \subsection "Chorus"
+    \addTocEntry
+    \score {
+      <<
+        \new ChoirStaff <<
+          \new Staff {
+            \set Staff.instrumentName = "S"
+            \new Voice = "Soprano" { \dynamicUp \ChorusSopranoNotes }
+          }
+          \new Lyrics \lyricsto Soprano \ChorusSopranoLyrics
+
+          \new Staff {
+            \set Staff.instrumentName = "A"
+            \new Voice = "Alto" { \dynamicUp \ChorusAltoNotes }
+          }
+          \new Lyrics \lyricsto Alto \ChorusAltoLyrics
+
+          \new Staff {
+            \set Staff.instrumentName = "T"
+            \new Voice = "Tenore" { \dynamicUp \ChorusTenoreNotes }
+          }
+          \new Lyrics \lyricsto Tenore \ChorusTenoreLyrics
+
+          \new Staff {
+            \set Staff.instrumentName = "B"
+            \new Voice = "Basso" { \dynamicUp \ChorusBassoNotes }
+          }
+          \new Lyrics \lyricsto Basso \ChorusBassoLyrics
+        >>
+        \new Staff { \ChorusOrgano }
+        \new FiguredBass { \ChorusBassFigures }
+      >>
+    }
+  }
 }

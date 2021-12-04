@@ -1,107 +1,163 @@
 \version "2.22.0"
 
 \include "../definitions.ly"
-
-\paper {
-  #(define (page-post-process layout pages) (ly:create-toc-file layout pages))
-}
-
-#(set-global-staff-size 15.87)
+\include "score_settings/full-score.ly"
 
 \book {
   \bookpart {
-    \header {
-      title = "O F F E R T O R I U M"
+    \section "Fremant venti"
+    \addTocEntry
+    \paper {
+      top-system-spacing.basic-distance = #10
+      top-system-spacing.minimum-distance = #10
+      top-markup-spacing.basic-distance = #0
+      top-markup-spacing.minimum-distance = #0
+      markup-system-spacing.basic-distance = #10
+      markup-system-spacing.minimum-distance = #10
+      system-system-spacing.basic-distance = #17
+      system-system-spacing.minimum-distance = #17
+      systems-per-page = #2
+      indent = 2.5\cm
     }
-    \paper { indent = 3.5\cm }
     \score {
       <<
         \new StaffGroup <<
-          \new GrandStaff <<
+          \new GrandStaff \with { \setGroupDistance #11 #12 } <<
+            \set GrandStaff.instrumentName = "Oboe"
             \new Staff {
-              \set Staff.instrumentName = "Oboe I"
-              \OboeI
+              \set Staff.instrumentName = "I"
+              \OffertoriumOboeI
             }
             \new Staff {
-              \set Staff.instrumentName = "Oboe II"
-              \OboeII
+              \set Staff.instrumentName = "II"
+              \OffertoriumOboeII
             }
           >>
         >>
-        \new StaffGroup <<
+        \new StaffGroup \with { \smallGroupDistance } <<
           \new Staff <<
-            \set Staff.instrumentName = \markup { \center-column { "Corno I, II" "in D" } }
+            \set Staff.instrumentName = \transposedName "Corno I, II" "D" ""
             % \transpose c d
-            \partCombine \CornoI \CornoII
-          >>
-          \new Staff <<
-            \set Staff.instrumentName = \markup { \center-column { "Clarino I, II" "in D" } }
-            % \transpose c d
-            \partCombine \ClarinoI \ClarinoII
+            \partCombine \OffertoriumCornoI \OffertoriumCornoII
           >>
         >>
-        \new Staff {
-          \set Staff.instrumentName = \markup { \center-column { "Timpani" "in D–A" } }
-          % \transpose c d
-          \Timpani
-        }
-        \new StaffGroup <<
-          \new GrandStaff \with { \smallGroupDistance } <<
+        \new StaffGroup \with { \smallGroupDistance } <<
+          \new GrandStaff \with { \setGroupDistance #11 #12 } <<
+            \set GrandStaff.instrumentName = "Violino"
             \new Staff {
-              \set Staff.instrumentName = "Violino I"
-              \ViolinoI
+              \set Staff.instrumentName = "I"
+              \OffertoriumViolinoI
             }
             \new Staff {
-              \set Staff.instrumentName = "Violino II"
-              \ViolinoII
+              \set Staff.instrumentName = "II"
+              \OffertoriumViolinoII
             }
           >>
           \new Staff {
             \set Staff.instrumentName = "Viola"
-            \Viola
+            \OffertoriumViola
+          }
+        >>
+        \new ChoirStaff \with { \setGroupDistance #12 #13 } <<
+          \new Staff {
+            \set Staff.instrumentName = "Basso"
+            \new Voice = "Basso" { \dynamicUp \OffertoriumBassoNotes }
+          }
+          \new Lyrics \lyricsto Basso \OffertoriumBassoLyrics
+        >>
+        \new StaffGroup <<
+          \new Staff {
+            \set Staff.instrumentName = \markup \center-column { "Organo" "e Bassi" }
+            % \transpose c c,
+            \OffertoriumOrgano
+          }
+        >>
+        \new FiguredBass { \OffertoriumBassFigures }
+      >>
+      \layout { }
+      \midi { \tempo 4 = 120 }
+    }
+  }
+  \bookpart {
+    \subsection "Chorus"
+    \addTocEntry
+    \score {
+      <<
+        \new StaffGroup <<
+          \new GrandStaff <<
+            \set GrandStaff.instrumentName = "ob"
+            \new Staff {
+              \set Staff.instrumentName = "1"
+              \ChorusOboeI
+            }
+            \new Staff {
+              \set Staff.instrumentName = "2"
+              \ChorusOboeII
+            }
+          >>
+        >>
+        \new StaffGroup <<
+          \new Staff <<
+            \set Staff.instrumentName = \markup \center-column { \transposedNameShort "clno" "D" "" "1, 2" }
+            % \transpose c d
+            \partCombine \ChorusClarinoI \ChorusClarinoII
+          >>
+        >>
+        \new Staff {
+          \set Staff.instrumentName = \transposedTimpShort "D" "" "A" ""
+          % \transpose c d
+          \ChorusTimpani
+        }
+        \new StaffGroup <<
+          \new GrandStaff \with { \smallGroupDistance } <<
+            \set GrandStaff.instrumentName = "vl"
+            \new Staff {
+              \set Staff.instrumentName = "1"
+              \ChorusViolinoI
+            }
+            \new Staff {
+              \set Staff.instrumentName = "2"
+              \ChorusViolinoII
+            }
+          >>
+          \new Staff {
+            \set Staff.instrumentName = "vla"
+            \ChorusViola
           }
         >>
         \new ChoirStaff <<
           \new Staff {
-            \set Staff.instrumentName = \SopranoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
-            \new Voice = "Soprano" { \dynamicUp \SopranoNotes }
+            \set Staff.instrumentName = "S"
+            \new Voice = "Soprano" { \dynamicUp \ChorusSopranoNotes }
           }
-          \new Lyrics \lyricsto Soprano \SopranoLyrics
+          \new Lyrics \lyricsto Soprano \ChorusSopranoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \AltoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
-            \new Voice = "Alto" { \dynamicUp \AltoNotes }
+            \set Staff.instrumentName = "A"
+            \new Voice = "Alto" { \dynamicUp \ChorusAltoNotes }
           }
-          \new Lyrics \lyricsto Alto \AltoLyrics
+          \new Lyrics \lyricsto Alto \ChorusAltoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \TenoreIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
-            \new Voice = "Tenore" { \dynamicUp \TenoreNotes }
+            \set Staff.instrumentName = "T"
+            \new Voice = "Tenore" { \dynamicUp \ChorusTenoreNotes }
           }
-          \new Lyrics \lyricsto Tenore \TenoreLyrics
+          \new Lyrics \lyricsto Tenore \ChorusTenoreLyrics
 
           \new Staff {
-            \set Staff.instrumentName = "Basso"
-            \new Voice = "Basso" { \dynamicUp \BassoNotes }
+            \set Staff.instrumentName = "B"
+            \new Voice = "Basso" { \dynamicUp \ChorusBassoNotes }
           }
-          \new Lyrics \lyricsto Basso \BassoLyrics
+          \new Lyrics \lyricsto Basso \ChorusBassoLyrics
         >>
         \new StaffGroup <<
           \new Staff {
-            \set Staff.instrumentName = \markup { \center-column { "Violone" "e Organo" } }
+            \set Staff.instrumentName = \markup \center-column { "org" "b" }
             % \transpose c c,
-            \Organo
+            \ChorusOrgano
           }
         >>
-        \new FiguredBass {
-          \BassFigures
-        }
+        \new FiguredBass { \ChorusBassFigures }
       >>
       \layout { }
       \midi { \tempo 4 = 120 }
